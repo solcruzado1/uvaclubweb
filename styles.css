@@ -64,7 +64,7 @@ body {
 
 /* ===========================
    TITULOS Y TEXTOS
-=========================== *
+=========================== */
 .section-title, .h1-custom, .h2-custom, .h3-custom, .h4-custom {
   font-family: var(--font-title);
   color: var(--dark-color);
@@ -135,6 +135,49 @@ body {
   text-align: center;
   line-height: 1.5;
   margin-bottom: 2rem;
+}
+
+/* ===========================
+   HELPERS Y EXTRAS
+=========================== */
+    
+  /* PARA RESALTEAR TODO EN MAYUS */
+.text-uppercase-custom {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+    /* TEXTO EN BOLD */
+.text-bold { font-weight: 700; }
+
+/* TEXTO EN GRIS IDEAL PARA FOOTER*/
+.text-muted-custom {
+  color: #6c757d;
+}
+
+/* FONDOS E IMÁGENES */
+.bg-cover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+  
+/* BLUR EN FOTOS BLANCO*/
+.bg-overlay-light {
+  background-color: rgba(255,255,255,0.7);
+  backdrop-filter: blur(5px);
+}
+
+  /* BLUR EN FOTOS NEGRO*/
+.bg-overlay-dark {
+  background-color: rgba(0,0,0,0.5);
+  backdrop-filter: blur(5px);
+  color: #fff;
+}
+  
+/* PARA REDONDEAR IMAGENES*/
+.img-rounded {
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 
@@ -353,6 +396,7 @@ body {
   text-align: left;
   margin-bottom: 1rem;
   letter-spacing: 0.01em;
+}
 
 /* ===========================
    PREGUNTAS FRECUENTES
@@ -489,63 +533,6 @@ footer {
   color: #fff5c2;
 }
 
-/* ===========================
-   HELPERS Y EXTRAS
-=========================== */
-  
-  /* PLANES DE SUSCRIPCION */
-.bg-cover {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* SOBRE NOSOTROS Y GALERIA */
-.img-rounded {
-  border-radius: 8px;
-  overflow: hidden;
-}
-  
-  /* PARA RESALTEAR TODO EN MAYUS */
-.text-uppercase-custom {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-    /* TEXTO EN BOLD */
-.text-bold { font-weight: 700; }
-.text-muted-custom { color: #6c757d; }
-.section-spacing-sm { padding-top: 50px; padding-bottom: 50px; }
-
-/* FONDOS E IMÁGENES */
-.bg-cover {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-  
-/* BLUR EN FOTOS BLANCO*/
-.bg-overlay-light {
-  background-color: rgba(255,255,255,0.7);
-  backdrop-filter: blur(5px);
-}
-
-  /* BLUR EN FOTOS NEGRO*/
-.bg-overlay-dark {
-  background-color: rgba(0,0,0,0.5);
-  backdrop-filter: blur(5px);
-  color: #fff;
-}
-  
-/* PARA REDONDEAR IMAGENES*/
-.img-rounded {
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-/* TEXTO EN GRIS IDEAL PARA FOOTER*/
-.text-muted-custom {
-  color: #6c757d;
-}
 
   
 /* ============================== */
