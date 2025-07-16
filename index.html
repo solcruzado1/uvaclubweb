@@ -4,10 +4,14 @@
     <!-- Configuración básica del documento -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plantilla Visible - Belluccia 3</title>
+    <title>Uvaclub - Belluccia 3</title>
 
-    <!-- Tipografía desde Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Tipografía Roboto de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Tipografía Sentient de Fontshare -->
+    <link href="https://api.fontshare.com/v2/css?f[]=sentient@700&display=swap" rel="stylesheet">
+
+    
 
     <!-- Framework CSS de Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
@@ -24,7 +28,7 @@
 <nav class="navbar navbar-expand-lg fixed-top">
   <div class="container">
     <!-- Logo o nombre del sitio -->
-    <a class="navbar-brand" href="#">MiWeb</a>
+    <a class="navbar-brand" href="#">Uva Club</a>
     <!-- Botón para mostrar menú en mobile -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
@@ -42,619 +46,422 @@
 </nav>
 <!-- /NAVBAR -->
 
-<!-- HERO: Sección de portada con llamado a la acción -->
-<section class="section-spacing container d-flex align-items-center justify-content-between" style="min-height: 100vh; padding-top: 100px;">
-  <div class="row align-items-center">
-    <!-- Texto principal -->
-    <div class="col-lg-6">
-      <h1 class="h1-custom">Hero Principal</h1>
-      <p class="p-custom">Esta sección es la primera impresión de tu web. Ideal para presentar tu propuesta de valor en pocas palabras y motivar una acción.</p>
-      <div class="d-flex gap-3 mt-4">
-        <a href="#" class="btn btn-dark">Acción Principal</a>
-        <a href="#" class="btn btn-outline-dark">Acción Secundaria</a>
+<!-- HERO personalizado estilo UvaClub -->
+<section class="section-spacing d-flex align-items-center" style="min-height: 100vh; background-image: url('https://github.com/solcruzado1/uvaclub/blob/main/img/fondo%20hero.png?raw=true'); background-size: cover; background-position: center;">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Columna de texto -->
+      <div class="col-lg-6">
+        <h1 class="h1-custom mb-0 text-uppercase">EXPLORÁ SABORES</h1>
+        <h1 class="h1-custom mt-0 text-uppercase">Y DESCUBRÍ TU VINO</h1>
+        <p class="p-custom mt-4">Embárcate en una travesía de sabores y aromas únicos</p>
+        <a href="#" class="btn btn-orange mb-5" style="background-color: #D36D15; color: #fff; border: none;">Quiero descurbrir vinos</a>
       </div>
-    </div>
-    <!-- Imagen destacada -->
-    <div class="col-lg-6 text-center">
-      <img src="https://imageplaceholder.net/500x500" class="img-fluid img-rounded" alt="Imagen Hero">
+
+      <!-- Columna de imagen -->
+      <div class="col-lg-6 text-center">
+        <img src="https://github.com/solcruzado1/uvaclub/blob/main/img/caja%20de%20vino%20hero.png?raw=true" class="img-fluid img-rounded" alt="Caja de vinos">
+      </div>
+
     </div>
   </div>
 </section>
+
 <!-- /HERO -->
 
-<!-- ABOUT: Sección sobre nosotros -->
+<!-- ABOUT: Sección COMO FUNCIONA LA SUSCRIPCION -->
 <section class="section-spacing container text-center">
-  <h2 class="h2-custom">Sección Sobre Nosotros</h2>
-  <p class="mt-3 mb-5">Contá quién sos, qué hacés y por qué debería interesarle al visitante.</p>
+  <h2 class="h2-custom mb-5">
+    CÓMO FUNCIONA LA <span class="text-secondary-title">SUSCRIPCIÓN</span>
+  </h2>
   <div class="row">
-    <!-- Tres columnas informativas -->
-    <div class="col-md-4">
-      <h4 class="h4-custom">Experiencia</h4>
-      <p class="p-custom">Un detalle de tu trayectoria o historia.</p>
+    <div class="col-md-4 mb-4">
+      <img src="https://github.com/solcruzado1/uvaclub/blob/main/img/icono%201.png?raw=true" alt="Ruta" class="img-fluid mb-3" style="max-height: 120px;">
+      <h5 class="fw-bold">Elegí tu ruta de exploración</h5>
+      <p class="p-custom">Seleccioná una de nuestras cajas: Sendero, Travesía o Expedición.</p>
     </div>
-    <div class="col-md-4">
-      <h4 class="h4-custom">Valores</h4>
-      <p class="p-custom">¿Qué principios guían tu trabajo?</p>
+    <div class="col-md-4 mb-4">
+      <img src="https://github.com/solcruzado1/uvaclub/blob/main/img/icono%202.png?raw=true" alt="Curaduría" class="img-fluid mb-3" style="max-height: 120px;">
+      <h5 class="fw-bold">Personalizá tu experiencia</h5>
+      <p class="p-custom">Contanos tus preferencias o dejate sorprender por nuestras curadurías.</p>
     </div>
-    <div class="col-md-4">
-      <h4 class="h4-custom">Compromiso</h4>
-      <p class="p-custom">Cómo asegurás la calidad en lo que ofrecés.</p>
+    <div class="col-md-4 mb-4">
+      <img src="https://github.com/solcruzado1/uvaclub/blob/main/img/icono%203.png?raw=true" alt="Camión" class="img-fluid mb-3" style="max-height: 120px;">
+      <h5 class="fw-bold">Recibí tu caja sin moverte</h5>
+      <p class="p-custom">Disfrutá del envío gratis en todo el país. Descubrí y probá tus vinos.</p>
     </div>
   </div>
 </section>
+
 <!-- /ABOUT -->
 
-<!-- SERVICES: Servicios o funcionalidades -->
-<section class="section-spacing container text-center">
-  <h2 class="h2-custom">Servicios o Características</h2>
-  <p class="mb-5">Lista de servicios o aspectos que se quieren destacar.</p>
-  <div class="row">
-    <!-- Cada columna es una tarjeta de servicio -->
-    <div class="col-md-4 mb-4">
-      <div class="card h-100 p-4">
-        <img src="https://imageplaceholder.net/100x100" class="mb-3" alt="Servicio">
-        <h5>Servicio 1</h5>
-        <p class="p-custom">Breve explicación del servicio.</p>
-      </div>
-    </div>
-    <!-- Cada columna es una tarjeta de servicio -->
-    <div class="col-md-4 mb-4">
-      <div class="card h-100 p-4">
-        <img src="https://imageplaceholder.net/100x100" class="mb-3" alt="Servicio">
-        <h5>Servicio 1</h5>
-        <p class="p-custom">Breve explicación del servicio.</p>
-      </div>
-    </div>
-    <!-- Cada columna es una tarjeta de servicio -->
-    <div class="col-md-4 mb-4">
-      <div class="card h-100 p-4">
-        <img src="https://imageplaceholder.net/100x100" class="mb-3" alt="Servicio">
-        <h5>Servicio 1</h5>
-        <p class="p-custom">Breve explicación del servicio.</p>
-      </div>
-    </div>
-    <!-- ... repetir estructura para más servicios ... -->
-  </div>
-</section>
-<!-- /SERVICES -->
-
-<!-- SECCIÓN A: Texto centrado sin imagen -->
-<section class="section-spacing container text-center">
-  <h2 class="display-5" class="h2-custom">Título destacado</h2>
-  <p class="lead-custom">Un texto breve para explicar o presentar algo importante.</p>
-  <div class="mt-4 d-flex justify-content-center gap-3">
-    <a href="#" class="btn btn-primary">Acción principal</a>
-    <a href="#" class="btn btn-outline-primary">Acción secundaria</a>
-  </div>
-</section>
-
-<!-- SECCIÓN B: Imagen izquierda, texto derecha -->
+<!-- SECCIÓN A: SOBRE NOSOTROS -->
 <section class="section-spacing container">
   <div class="row align-items-center">
-    <!-- Columna de imagen -->
+    <!-- Imagen izquierda -->
     <div class="col-lg-6 text-center mb-4 mb-lg-0">
-      <img src="https://imageplaceholder.net/500x400" class="img-fluid img-rounded" alt="Imagen ilustrativa">
+      <img src="https://github.com/solcruzado1/uvaclub/blob/main/img/quienes%20somos.png?raw=true" alt="Grupo fundador" class="img-fluid img-rounded" style="max-width: 100%; height: auto;">
     </div>
-    <!-- Columna de texto -->
+
+    <!-- Texto derecha -->
     <div class="col-lg-6">
-      <h2 class="display-5" class="h2-custom">Título con imagen</h2>
-      <p class="lead-custom">Descripción breve que acompaña y refuerza la propuesta.</p>
-      <a href="#" class="btn btn-primary mt-3">Saber más</a>
+      <h3 class="fw-bold mb-3">Sobre nosotros</h3>
+      <p class="p-custom mb-4">
+        Somos tres amigos unidos por la misma pasión: explorar el mundo del vino sin límites. Lo que comenzó como un ritual entre copas se convirtió en un sueño hecho realidad: acercar a más personas botellas cuidadosamente seleccionadas, maridajes únicos y experiencias de cata que dejan huella.
+      </p>
+      <a href="#" class="btn btn-orange mb-5" style="background-color: #D36D15; color: #fff; border: none;">Conocé más</a>
     </div>
   </div>
 </section>
 
-<!-- SECCIÓN C: Texto izquierda, imagen derecha -->
-<section class="section-spacing container">
-  <div class="row align-items-center">
-    <!-- Columna de texto -->
-    <div class="col-lg-6">
-      <h2 class="display-5" class="h2-custom">Otra disposición</h2>
-      <p class="lead-custom">Sección útil para combinar mensajes con una imagen a la derecha.</p>
-      <a href="#" class="btn btn-primary mt-3">Conocé más</a>
-    </div>
-    <!-- Columna de imagen -->
-    <div class="col-lg-6 text-center mt-4 mt-lg-0">
-      <img src="https://imageplaceholder.net/500x400" class="img-fluid img-rounded" alt="Imagen ilustrativa">
-    </div>
-  </div>
-</section>
-
-<!-- SECCIÓN D: Dos columnas iguales con texto e imagen -->
-<section class="section-spacing container">
-  <div class="row align-items-center">
-    <!-- Imagen a la izquierda -->
-    <div class="col-md-6 text-center mb-4 mb-md-0">
-      <img src="https://imageplaceholder.net/400x300" class="img-fluid img-rounded" alt="Imagen">
-    </div>
-    <!-- Texto a la derecha -->
-    <div class="col-md-6 text-center text-md-start">
-      <h3 class="display-6" class="h3-custom">Título flexible</h3>
-      <p class="lead-custom">Podés usar este bloque para presentar información destacada acompañada de una imagen.</p>
-      <a href="#" class="btn btn-primary">Explorar</a>
-    </div>
-  </div>
-</section>
-
-<!-- SECCIÓN E: Beneficios con íconos centrados (Bootstrap Icons) -->
-<section class="section-spacing container text-center py-5">
-  <h2 class="mb-5 text-uppercase fw-bold" class="h2-custom">Alto rendimiento, tecnología avanzada</h2>
-  <div class="row">
-    <!-- Beneficio 1 -->
-    <div class="col-md-4 mb-4">
-      <i class="bi bi-cpu-fill fs-1 mb-3 text-primary"></i>
-      <h5>Electrónica mejorada</h5>
-      <p class="p-custom">Nuestras baterías están diseñadas para durar más y brindar mayor eficiencia energética.</p>
-    </div>
-    <!-- Beneficio 2 -->
-    <div class="col-md-4 mb-4">
-      <i class="bi bi-person-check-fill fs-1 mb-3 text-primary"></i>
-      <h5>Diseño ergonómico</h5>
-      <p class="p-custom">Mayor comodidad en el uso prolongado sin comprometer el rendimiento.</p>
-    </div>
-    <!-- Beneficio 3 -->
-    <div class="col-md-4 mb-4">
-      <i class="bi bi-gear-fill fs-1 mb-3 text-primary"></i>
-      <h5>Motor optimizado</h5>
-      <p class="p-custom">Más potencia y velocidad para trabajar con eficiencia como nunca antes.</p>
-    </div>
-  </div>
-</section>
-
-<!-- SECCIÓN F: Beneficios sobre fondo de color con íconos de Bootstrap -->
-<section class="section-spacing text-center py-5">
-  <div class="container">
-    <h2 class="mb-5 text-uppercase fw-bold" class="h2-custom">Beneficios del producto</h2>
-    <div class="row">
-      <!-- Ítem 1 -->
-      <div class="col-md-4 mb-4">
-        <i class="bi bi-speedometer2 fs-1 mb-3 text-dark"></i>
-        <h5>Velocidad</h5>
-        <p class="p-custom">Procesos más rápidos y eficientes gracias a nuestra tecnología.</p>
-      </div>
-      <!-- Ítem 2 -->
-      <div class="col-md-4 mb-4">
-        <i class="bi bi-battery-full fs-1 mb-3 text-dark"></i>
-        <h5>Durabilidad</h5>
-        <p class="p-custom">Componentes diseñados para resistir y durar en el tiempo.</p>
-      </div>
-      <!-- Ítem 3 -->
-      <div class="col-md-4 mb-4">
-        <i class="bi bi-tools fs-1 mb-3 text-dark"></i>
-        <h5>Mantenimiento simple</h5>
-        <p class="p-custom">Fácil de usar y mantener, ideal para cualquier usuario.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SECCIÓN G: Beneficios destacados en cards con íconos de Bootstrap -->
-<section class="section-spacing container text-center py-5">
-  <h2 class="mb-5 text-uppercase fw-bold" class="h2-custom">¿Por qué elegirnos?</h2>
-  <div class="row">
-    <!-- Card 1 -->
-    <div class="col-md-4 mb-4">
-      <div class="card h-100 p-4 shadow-sm">
-        <i class="bi bi-truck fs-1 mb-3 text-primary"></i>
-        <h5>Entrega rápida</h5>
-        <p class="p-custom">Recibí tu producto en tiempo récord con envíos ágiles y seguros.</p>
-      </div>
-    </div>
-    <!-- Card 2 -->
-    <div class="col-md-4 mb-4">
-      <div class="card h-100 p-4 shadow-sm">
-        <i class="bi bi-headset fs-1 mb-3 text-primary"></i>
-        <h5>Atención personalizada</h5>
-        <p class="p-custom">Te acompañamos en todo el proceso con soporte real y humano.</p>
-      </div>
-    </div>
-    <!-- Card 3 -->
-    <div class="col-md-4 mb-4">
-      <div class="card h-100 p-4 shadow-sm">
-        <i class="bi bi-shield-lock fs-1 mb-3 text-primary"></i>
-        <h5>Seguridad garantizada</h5>
-        <p class="p-custom">Tu información y tu compra protegidas en cada paso.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TEAM: Presentación del equipo -->
+<!-- SECCIÓN B: LO QUE TE INVITAMOS A VIVIR -->
 <section class="section-spacing container text-center">
-  <h2 class="h2-custom">Equipo</h2>
-  <p class="p-custom">Personas clave detrás del proyecto.</p>
-  <div class="row mt-5">
-    <!-- Cada columna es un integrante -->
-    <div class="col-md-4 mb-4">
-      <img src="https://imageplaceholder.net/200x200" class="rounded-circle mb-3" alt="Miembro 1">
-      <h5>Nombre Apellido</h5>
-      <p class="p-custom">Rol en el equipo</p>
+  <h2 class="h2-custom mb-3">
+    <strong>LO QUE TE INVITAMOS A</strong> <span class="text-secondary-title">VIVIR</span>
+  </h2>
+  <p class="p-custom mb-5">Trabajamos con bodegas selectas y creamos experiencias de sabor que completan cada botella</p>
+
+  <div class="row justify-content-center">
+    <!-- Item 1: Maridajes -->
+    <div class="col-md-5 mb-4">
+      <img src="https://github.com/solcruzado1/uvaclub/blob/main/img/maridaje.png?raw=true" alt="Maridajes" class="img-fluid mb-3 img-rounded" style="max-height: 200px;">
+      <h5 class="fw-bold">Maridajes</h5>
+      <p class="p-custom">Cada caja incluye un maridaje seleccionado especialmente para complementar la experiencia.</p>
     </div>
-    <!-- Cada columna es un integrante -->
-    <div class="col-md-4 mb-4">
-      <img src="https://imageplaceholder.net/200x200" class="rounded-circle mb-3" alt="Miembro 1">
-      <h5>Nombre Apellido</h5>
-      <p class="p-custom">Rol en el equipo</p>
-    </div>
-    <!-- Cada columna es un integrante -->
-    <div class="col-md-4 mb-4">
-      <img src="https://imageplaceholder.net/200x200" class="rounded-circle mb-3" alt="Miembro 1">
-      <h5>Nombre Apellido</h5>
-      <p class="p-custom">Rol en el equipo</p>
+
+    <!-- Item 2: Contenido exclusivo -->
+    <div class="col-md-5 mb-4">
+      <img src="https://github.com/solcruzado1/uvaclub/blob/main/img/contenido.png?raw=true" alt="Contenido" class="img-fluid mb-3 img-rounded" style="max-height: 200px;">
+      <h5 class="fw-bold">Contenido exclusivo</h5>
+      <p class="p-custom">Ideal para quienes quieren aprender más. Tu suscripción es una puerta a un mundo de descubrimiento.</p>
     </div>
   </div>
 </section>
-<!-- /TEAM -->
 
-<!-- TESTIMONIALS: Opiniones de clientes -->
+
+<!-- SECCIÓN C: MARCAS ASOCIADAS -->
 <section class="section-spacing container text-center">
-  <h2 class="h2-custom">Testimonios</h2>
-  <p class="p-custom">Comentarios reales de usuarios para generar confianza.</p>
-  <div class="row">
-    <!-- Cada columna es un testimonio -->
-    <div class="col-md-4">
-      <blockquote class="blockquote p-4">
-        “Comentario de cliente.”
-        <footer class="blockquote-footer mt-3">Cliente 1</footer>
-      </blockquote>
+  <div class="row justify-content-center align-items-center g-4">
+    <div class="col-6 col-md-2">
+      <img src="https://github.com/solcruzado1/uvaclub/blob/main/img/Norton.png?raw=true" alt="Norton" class="img-fluid">
     </div>
-    <!-- Cada columna es un testimonio -->
-    <div class="col-md-4">
-      <blockquote class="blockquote p-4">
-        “Comentario de cliente.”
-        <footer class="blockquote-footer mt-3">Cliente 1</footer>
-      </blockquote>
+    <div class="col-6 col-md-2">
+      <img src="https://github.com/solcruzado1/uvaclub/blob/main/img/zuccardi-logo-1.png?raw=true" alt="Zuccardi" class="img-fluid">
     </div>
-    <!-- Cada columna es un testimonio -->
-    <div class="col-md-4">
-      <blockquote class="blockquote p-4">
-        “Comentario de cliente.”
-        <footer class="blockquote-footer mt-3">Cliente 1</footer>
-      </blockquote>
+    <div class="col-6 col-md-2">
+      <img src="https://github.com/solcruzado1/uvaclub/blob/main/img/catena.png?raw=true" alt="Catena Zapata" class="img-fluid">
+    </div>
+    <div class="col-6 col-md-2">
+      <img src="https://github.com/solcruzado1/uvaclub/blob/main/img/Trapiche_Logo-png.png?raw=true" alt="Trapiche" class="img-fluid">
+    </div>
+    <div class="col-6 col-md-2">
+      <img src="https://github.com/solcruzado1/uvaclub/blob/main/img/errazuriz-logo.png?raw=true" alt="Errazuriz" class="img-fluid">
     </div>
   </div>
 </section>
-<!-- /TESTIMONIALS -->
-
-<!-- GALERÍA A: Grid clásico de 3 columnas -->
-<section class="section-spacing container py-5 text-center">
-  <h2 class="mb-4" class="h2-custom">Galería de imágenes</h2>
-  <p class="mb-5">Una estructura simple para mostrar imágenes de manera ordenada.</p>
-  <div class="row g-4">
-    <div class="col-md-4"><img src="https://imageplaceholder.net/400x300" class="img-fluid img-rounded rounded" alt="Imagen 1"></div>
-    <div class="col-md-4"><img src="https://imageplaceholder.net/400x300" class="img-fluid img-rounded rounded" alt="Imagen 2"></div>
-    <div class="col-md-4"><img src="https://imageplaceholder.net/400x300" class="img-fluid img-rounded rounded" alt="Imagen 3"></div>
-  </div>
-</section>
-
-<!-- GALERÍA B: Masonry layout con column-count (hay controles en el css)-->
-<section class="section-spacing container py-5">
-  <h2 class="text-center mb-5 text-uppercase fw-bold" class="h2-custom">Galería tipo Masonry</h2>
-  
-  <div class="masonry__container">
-    <img class="masonry__item" src="https://imageplaceholder.net/400x300" alt="Imagen 1">
-    <img class="masonry__item" src="https://imageplaceholder.net/400x600" alt="Imagen 2">
-    <img class="masonry__item" src="https://imageplaceholder.net/400x350" alt="Imagen 3">
-    <img class="masonry__item" src="https://imageplaceholder.net/400x500" alt="Imagen 4">
-    <img class="masonry__item" src="https://imageplaceholder.net/400x250" alt="Imagen 5">
-    <img class="masonry__item" src="https://imageplaceholder.net/400x450" alt="Imagen 6">
-    <img class="masonry__item" src="https://imageplaceholder.net/400x400" alt="Imagen 7">
-    <img class="masonry__item" src="https://imageplaceholder.net/400x550" alt="Imagen 8">
-  </div>
-</section>
-
-<!-- GALERÍA C: Carrusel horizontal con tarjetas -->
-<section class="section-spacing container py-5 text-center">
-  <h2 class="mb-4" class="h2-custom">Galería deslizante</h2>
-  <div id="carouselGaleriaC" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <!-- Slide 1 -->
-      <div class="carousel-item active">
-        <div class="d-flex justify-content-center gap-3">
-          <img src="https://imageplaceholder.net/200x300" class="rounded" alt="Item 1">
-          <img src="https://imageplaceholder.net/200x300" class="rounded" alt="Item 2">
-          <img src="https://imageplaceholder.net/200x300" class="rounded" alt="Item 3">
-          <img src="https://imageplaceholder.net/200x300" class="rounded" alt="Item 4">
-          <img src="https://imageplaceholder.net/200x300" class="rounded" alt="Item 5">
-        </div>
-      </div>
-      <!-- Slide 2 -->
-      <div class="carousel-item">
-        <div class="d-flex justify-content-center gap-3">
-          <img src="https://imageplaceholder.net/200x300" class="rounded" alt="Item 6">
-          <img src="https://imageplaceholder.net/200x300" class="rounded" alt="Item 7">
-          <img src="https://imageplaceholder.net/200x300" class="rounded" alt="Item 8">
-          <img src="https://imageplaceholder.net/200x300" class="rounded" alt="Item 9">
-          <img src="https://imageplaceholder.net/200x300" class="rounded" alt="Item 10">
-        </div>
-      </div>
-    </div>
-    <!-- Controles -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselGaleriaC" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselGaleriaC" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </button>
-  </div>
-</section>
-
-
-<!-- GALERÍA D: Carrusel con imagen + texto encima -->
-<section class="section-spacing container py-5 text-center">
-  <h2 class="mb-4" class="h2-custom">Galería con textos</h2>
-  <div id="carouselGaleriaD" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <!-- Slide 1 -->
-      <div class="carousel-item active">
-        <div class="position-relative">
-          <img src="https://imageplaceholder.net/800x400" class="img-fluid img-rounded w-100 rounded" alt="Imagen 1">
-          <div class="position-absolute top-0 start-0 p-4 bg-dark bg-opacity-50 text-white w-100 h-100 d-flex align-items-center justify-content-start text-start">
-            <div>
-              <h4 class="fw-bold" class="h4-custom">Título 1</h4>
-              <p class="lead-custom">Descripción breve sobre esta imagen.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Slide 2 -->
-      <div class="carousel-item">
-        <div class="position-relative">
-          <img src="https://imageplaceholder.net/800x400" class="img-fluid img-rounded w-100 rounded" alt="Imagen 2">
-          <div class="position-absolute top-0 start-0 p-4 bg-dark bg-opacity-50 text-white w-100 h-100 d-flex align-items-center justify-content-start text-start">
-            <div>
-              <h4 class="fw-bold" class="h4-custom">Título 2</h4>
-              <p class="lead-custom">Otra descripción diferente para esta imagen.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Controles -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselGaleriaD" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselGaleriaD" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </button>
-  </div>
-</section>
-
-
-<!-- GALERÍA E: Cards tipo "story" con imagen y texto -->
-<section class="section-spacing container py-5 text-center">
-  <h2 class="mb-4" class="h2-custom">Galería de historias</h2>
-  <div class="row g-4">
-    <div class="col-md-3">
-      <div class="card h-100">
-        <img src="https://imageplaceholder.net/400x300" class="card-img-top" alt="">
-        <div class="card-body">
-          <p class="card-text small">Una breve descripción o fragmento de historia que acompaña la imagen.</p>
-        </div>
-      </div>
-    </div>
-     <div class="col-md-3">
-      <div class="card h-100">
-        <img src="https://imageplaceholder.net/400x300" class="card-img-top" alt="">
-        <div class="card-body">
-          <p class="card-text small">Una breve descripción o fragmento de historia que acompaña la imagen.</p>
-        </div>
-      </div>
-    </div>
-     <div class="col-md-3">
-      <div class="card h-100">
-        <img src="https://imageplaceholder.net/400x300" class="card-img-top" alt="">
-        <div class="card-body">
-          <p class="card-text small">Una breve descripción o fragmento de historia que acompaña la imagen.</p>
-        </div>
-      </div>
-    </div>
-     <div class="col-md-3">
-      <div class="card h-100">
-        <img src="https://imageplaceholder.net/400x300" class="card-img-top" alt="">
-        <div class="card-body">
-          <p class="card-text small">Una breve descripción o fragmento de historia que acompaña la imagen.</p>
-        </div>
-      </div>
-    </div>
-    <!-- repetir para más -->
-  </div>
-</section>
-
-<!-- CTA: Llamado a la acción final -->
-<section class="section-spacing container text-center my-5">
-  <h2 class="h2-custom">¿Listo para empezar?</h2>
-  <p class="p-custom">Texto para motivar acción.</p>
-  <a href="#" class="btn btn-dark mt-4">Comenzá Ahora</a>
-</section>
-<!-- /CTA -->
-
-<!-- PRICING: Tabla de precios o planes -->
-<section class="section-spacing container text-center">
-  <h2 class="h2-custom">Planes o Precios</h2>
-  <p class="p-custom">Comparación de planes.</p>
-  <div class="row mt-5">
-    <!-- Cada columna es un plan -->
-    <div class="col-md-4">
-      <div class="card p-4 h-100">
-        <h5>Plan Básico</h5>
-        <p class="display-6">$100</p>
-        <ul class="list-unstyled">
-          <li>✔ Servicio básico 1</li>
-          <li>✔ Servicio básico 2</li>
-        </ul>
-        <a href="#" class="btn btn-outline-dark mt-3">Elegir</a>
-      </div>
-    </div>
-    <!-- Cada columna es un plan -->
-    <div class="col-md-4">
-      <div class="card p-4 h-100">
-        <h5>Plan Básico</h5>
-        <p class="display-6">$100</p>
-        <ul class="list-unstyled">
-          <li>✔ Servicio básico 1</li>
-          <li>✔ Servicio básico 2</li>
-        </ul>
-        <a href="#" class="btn btn-outline-dark mt-3">Elegir</a>
-      </div>
-    </div>
-    <!-- Cada columna es un plan -->
-    <div class="col-md-4">
-      <div class="card p-4 h-100">
-        <h5>Plan Básico</h5>
-        <p class="display-6">$100</p>
-        <ul class="list-unstyled">
-          <li>✔ Servicio básico 1</li>
-          <li>✔ Servicio básico 2</li>
-        </ul>
-        <a href="#" class="btn btn-outline-dark mt-3">Elegir</a>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- /PRICING -->
 
 <!-- PLANES DE SUSCRIPCIÓN: Sección con 3 opciones destacadas -->
-<section class="section-spacing container text-center">
-  <h2 class="h2-custom">Planes de Suscripción</h2>
-  <p class="p-custom">Elegí el plan que mejor se adapta a tus necesidades. Cada uno incluye diferentes beneficios pensados para vos.</p>
-  
-  <div class="row mt-5">
-    
-    <!-- Card: Plan Básico -->
-    <div class="col-md-4 mb-4">
-      <div class="card p-4 h-100">
-        <!-- Título y precio -->
-        <h5 class="text-uppercase">Plan Básico</h5>
-        <p class="display-6 text-primary">$49.000 <small>/ mes</small></p>
-        
-        <!-- Imagen ilustrativa -->
-        <img src="https://imageplaceholder.net/300x200" class="img-fluid img-rounded my-3" alt="Plan Básico">
+<!-- PLANES DE SUSCRIPCIÓN -->
+<section class="section-spacing text-white bg-cover" style="background-image: url('https://tu-github.com/ruta/fondo-marron.jpg');">
+  <div class="container text-center">
+    <h2 class="h2-custom text-white">ELEGÍ TU PLAN Y COMENZÁ LA EXPLORACIÓN</h2>
 
-        <!-- Descripción -->
-        <p class="p-custom">Perfecto para empezar.<br><strong>Incluye:</strong></p>
-        
-        <!-- Lista de beneficios -->
-        <ul class="list-unstyled text-start mx-auto" style="max-width: 250px;">
-          <li>✔ Acceso limitado a contenido</li>
-          <li>✔ Soporte básico</li>
-          <li>✔ Recursos descargables</li>
-          <li>✔ Actualizaciones mensuales</li>
-        </ul>
-
-        <!-- Botón CTA -->
-        <a href="#" class="btn btn-primary mt-3">Elegir plan</a>
-      </div>
+    <!-- Etiqueta destacada para el plan del medio -->
+    <div class="mb-4">
+      <span class="badge bg-warning text-dark px-4 py-2 fw-bold" style="font-size: 1rem;">¡MÁS ELEGIDO!</span>
     </div>
 
-    <!-- Card: Plan Pro (Recomendado) -->
-    <div class="col-md-4 mb-4">
-      <div class="card p-4 h-100 border border-primary">
-        <!-- Título y precio -->
-        <h5 class="text-uppercase">Plan Pro <span class="badge bg-primary ms-2">Recomendado</span></h5>
-        <p class="display-6 text-primary">$55.000 <small>/ mes</small></p>
-        
-        <!-- Imagen ilustrativa -->
-        <img src="https://imageplaceholder.net/300x200" class="img-fluid img-rounded my-3" alt="Plan Pro">
+    <div class="row mt-5">
 
-        <!-- Descripción -->
-        <p class="p-custom">Ideal para quienes buscan más.<br><strong>Incluye:</strong></p>
-        
-        <!-- Lista de beneficios -->
-        <ul class="list-unstyled text-start mx-auto" style="max-width: 250px;">
-          <li>✔ Todo lo del plan básico</li>
-          <li>✔ Soporte prioritario</li>
-          <li>✔ Acceso a workshops</li>
-          <li>✔ Herramientas premium</li>
-        </ul>
+      <!-- Plan Sendero -->
+<div class="col-md-4 mb-4">
+  <div class="card bg-transparent border border-light text-dark h-100 p-4">
+    <h5 class="text-uppercase">PLAN SENDERO</h5>
+    <img src="https://github.com/solcruzado1/uvaclub/blob/main/img/caja%20suscripcion%201.png?raw=true" class="img-fluid my-3" alt="Plan Sendero">
+    <p class="display-6 text-black">$15.500</p>
+    <p class="text-uppercase fw-bold border-top border-bottom border-2 border-dark py-2" style="color: #16321f;">TU PRIMERA EXPEDICIÓN EMPIEZA AQUÍ</p>
+    <ul class="list-unstyled text-start mx-auto mt-3" style="max-width: 280px; color: #000;">
+      <li>✔ 3 vinos seleccionados por sommeliers</li>
+      <li>✔ Maridaje con quesos artesanales</li>
+      <li>✔ Fichas de cata impresas</li>
+    </ul>
+    <a href="#" class="btn mt-3" style="background-color: #D36D15; color: #fff; border: none;">¡Lo quiero!</a>
+  </div>
+</div>
 
-        <!-- Botón CTA -->
-        <a href="#" class="btn btn-primary mt-3">Elegir plan</a>
+
+      <!-- Plan Travesía -->
+      <div class="col-md-4 mb-4">
+        <div class="card bg-transparent border border-light text-dark h-100 p-4">
+          <h5 class="text-uppercase">PLAN TRAVESÍA</h5>
+          <img src="https://github.com/solcruzado1/uvaclub/blob/main/img/caja%20sucripcion%202.png?raw=true" class="img-fluid my-3" alt="Plan Travesía">
+          <p class="display-6 text-black">$22.500</p>
+          <p class="text-uppercase fw-bold border-top border-bottom border-2 border-dark py-2" style="color: #16321f;">CUANDO EL VINO YA ES PARTE DE VOS</p>
+          <ul class="list-unstyled text-start mx-auto mt-3" style="max-width: 280px;">
+            <li style="color: #fffff;">✔ 3 vinos (2 tintos + 1 blanco)</li>
+            <li style="color: #fffff;">✔ Maridaje con quesos artesanales</li>
+            <li style="color: #c75a00;">✔ Fichas + QR a video de cata</li>
+            <li style="color: #c75a00;">✔ Acceso al programa WineSwap</li>
+          </ul>
+          <a href="#" class="btn mt-3" style="background-color: #D36D15; color: #fff; border: none;">¡Lo quiero!</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Card: Plan Full -->
-    <div class="col-md-4 mb-4">
-      <div class="card p-4 h-100">
-        <!-- Título y precio -->
-        <h5 class="text-uppercase">Plan Full</h5>
-        <p class="display-6 text-primary">$60.000 <small>/ mes</small></p>
-        
-        <!-- Imagen ilustrativa -->
-        <img src="https://imageplaceholder.net/300x200" class="img-fluid img-rounded my-3" alt="Plan Full">
-
-        <!-- Descripción -->
-        <p class="p-custom">La experiencia completa.<br><strong>Incluye:</strong></p>
-        
-        <!-- Lista de beneficios -->
-        <ul class="list-unstyled text-start mx-auto" style="max-width: 250px;">
-          <li>✔ Todo lo del plan Pro</li>
-          <li>✔ Consultorías personalizadas</li>
-          <li>✔ Acceso anticipado a lanzamientos</li>
-          <li>✔ Certificados exclusivos</li>
-        </ul>
-
-        <!-- Botón CTA -->
-        <a href="#" class="btn btn-primary mt-3">Elegir plan</a>
+      <!-- Plan Expedición -->
+      <div class="col-md-4 mb-4">
+       <div class="card bg-transparent border border-light text-dark h-100 p-4">
+          <h5 class="text-uppercase">PLAN EXPEDICIÓN</h5>
+          <img src="https://github.com/solcruzado1/uvaclub/blob/main/img/caja%20suscripcion%203.png?raw=true" class="img-fluid my-3" alt="Plan Expedición">
+          <p class="display-6 text-black">$33.500</p>
+          <p class="text-uppercase fw-bold border-top border-bottom border-2 border-dark py-2" style="color: #16321f;">EXPERIENCIA COMPLETA Y BENEFICIOS EXTRA</p>
+          <ul class="list-unstyled text-start mx-auto mt-3" style="max-width: 280px;">
+            <li style="color: #fffff;">✔ 3 vinos premium</li>
+            <li style="color: #fffff;">✔ Maridaje exclusivo</li>
+            <li style="color: #c75a00;">✔ Fichas + acceso a WineSwap</li>
+            <li style="color: #c75a00;">✔ Cupón del 10% en vinotecas asociadas</li>
+          </ul>
+          <a href="#" class="btn mt-3" style="background-color: #D36D15; color: #fff; border: none;">¡Lo quiero!</a>
+        </div>
       </div>
-    </div>
 
+    </div>
   </div>
 </section>
+
 <!-- /PLANES DE SUSCRIPCIÓN -->
 
-<!-- FAQS: Preguntas frecuentes -->
-<section class="section-spacing container text-center">
-  <h2 class="h2-custom">Preguntas Frecuentes</h2>
-  <p class="p-custom">Respuestas a dudas comunes.</p>
-  <div class="accordion mt-5" id="faqAccordion">
-    <!-- Ítem de pregunta -->
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingOne">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-          ¿Qué incluye el servicio?
-        </button>
-      </h2>
-      <div id="collapseOne" class="accordion-collapse collapse show">
-        <div class="accordion-body">
-          Explicación detallada.
-        </div>
+<!-- SECCIÓN DE REGALOS DE CATA -->
+<section class="section-spacing text-center" style="background-image: url('https://github.com/solcruzado1/uvaclub/blob/main/img/fondo-textura.png?raw=true'); background-size: cover; background-repeat: no-repeat;">
+  <div class="container">
+    <h2 class="h2-custom fw-bold text-uppercase">Porque la experiencia es completa</h2>
+    <p class="p-custom mb-5">Buscamos que cada cata sea única: por eso, cada caja trae un regalo sorpresa que cambia mes a mes</p>
+    
+    <div class="row justify-content-center">
+      <!-- Regalo 1 -->
+      <div class="col-md-3 mb-4">
+        <img src="https://github.com/solcruzado1/uvaclub/blob/main/img/cata1.png?raw=true?raw=true" class="img-fluid mb-3" alt="Tapón Hermético">
+        <h5 class="fw-bold">Tapón hermético</h5>
+        <p class="p-custom">Un tapón reutilizable<br>que sella la botella</p>
       </div>
-    </div>
-    <!-- Ítem de pregunta -->
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingTwo">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-          ¿Qué incluye el servicio?
-        </button>
-      </h2>
-      <div id="collapseTwo" class="accordion-collapse collapse show">
-        <div class="accordion-body">
-          Explicación detallada.
-        </div>
+
+      <!-- Regalo 2 -->
+      <div class="col-md-3 mb-4">
+        <img src="https://github.com/solcruzado1/uvaclub/blob/main/img/cata2.png?raw=true" class="img-fluid mb-3" alt="Corta Cápsulas">
+        <h5 class="fw-bold">Corta Cápsulas</h5>
+        <p class="p-custom">Sirve para abrir botellas<br>de forma fácil y prolija</p>
+      </div>
+
+      <!-- Regalo 3 -->
+      <div class="col-md-3 mb-4">
+        <img src="https://github.com/solcruzado1/uvaclub/blob/main/img/cata3.png?raw=true?raw=true" class="img-fluid mb-3" alt="Vertedor Antigoteo">
+        <h5 class="fw-bold">Vertedor Antigoteo</h5>
+        <p class="p-custom">Permite airear el vino y<br>separar sedimentos</p>
+      </div>
+
+      <!-- Regalo 4 -->
+      <div class="col-md-3 mb-4">
+        <img src="https://github.com/solcruzado1/uvaclub/blob/main/img/cata4.png?raw=true?raw=true" class="img-fluid mb-3" alt="Decantador">
+        <h5 class="fw-bold">Decantador</h5>
+        <p class="p-custom">Permite servir el vino<br>con precisión</p>
       </div>
     </div>
   </div>
 </section>
-<!-- /FAQS -->
+
+<!-- SECCIÓN E: PROGRAMA WINESWAP -->
+<section class="section-spacing" style="background-image: url('https://github.com/solcruzado1/uvaclub/blob/main/img/fondo-textura.png?raw=true'); background-size: cover; background-repeat: no-repeat;">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Imagen ilustrativa -->
+      <div class="col-md-6 text-center mb-4 mb-md-0">
+        <img src="https://github.com/solcruzado1/uvaclub/blob/main/img/wineswap.png?raw=true" class="img-fluid" alt="WineSwap Intercambio">
+      </div>
+
+      <!-- Texto explicativo -->
+      <div class="col-md-6">
+        <h5 class="fw-bold mb-3">Programa WineSwap</h5>
+        <p class="p-custom mb-2">WineSwap es nuestro programa exclusivo de intercambio entre miembros de UvaClub.</p>
+        <p class="p-custom mb-2"><strong>¿Te llegó una botella que ya conocías?<br>¿Querés probar algo distinto?</strong></p>
+        <p class="p-custom">Con WineSwap podés intercambiar vinos con otros exploradores del gusto de forma fácil y gratuita una vez por mes. Solo elegí la botella que querés cambiar, buscá el match ideal y coordinamos el envío protegido a domicilio.</p>
+        <a href="#" class="btn mt-3" style="background-color: #D36D15; color: #fff; border: none;">Conocé más</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- GALERÍA DE EXPERIENCIAS -->
+<section class="section-spacing text-center bg-planes-overlay">
+  <div class="container text-black">
+    <h2 class="h2-custom text-uppercase fw-bold mb-3" style="color: #000;">Galería de experiencias</h2>
+    <p class="p-custom mb-4" style="color: #000;">Nuestra galería es un reflejo de lo que vivimos juntos:<br>encuentros, risas, brindis y descubrimientos.</p>
+    <a href="#" class="btn btn-orange mb-5" style="background-color: #D36D15; color: #fff; border: none;">Ver galería completa</a>
+
+    <div class="row g-4">
+      <!-- Imagen 1 -->
+      <div class="col-md-4">
+        <img src="https://github.com/solcruzado1/uvaclub/blob/main/img/galeria1.png?raw=true" class="img-fluid img-rounded mb-2" alt="Galería 1">
+        <p class="p-custom fst-italic" style="color: #000;">“Compartir vino es compartir<br>historias y tiempo de calidad.”</p>
+      </div>
+
+      <!-- Imagen 2 -->
+      <div class="col-md-4">
+        <img src="https://github.com/solcruzado1/uvaclub/blob/main/img/galeria2.png?raw=true" class="img-fluid img-rounded mb-2" alt="Galería 2">
+        <p class="p-custom fst-italic" style="color: #000;">“Festejar en familia es llenar la<br>mesa de recuerdos y buenos vinos.”</p>
+      </div>
+
+      <!-- Imagen 3 -->
+      <div class="col-md-4">
+        <img src="https://github.com/solcruzado1/uvaclub/blob/main/img/galeria3.png?raw=true" class="img-fluid img-rounded mb-2" alt="Galería 3">
+         <p class="p-custom fst-italic" style="color: #000;">“Un brindis entre amigas es<br>celebrar la amistad en cada copa.”</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- TESTIMONIOS -->
+<section class="section-spacing container">
+  <h2 class="h2-custom mb-5 text-center">
+    LO QUE DICEN <span style="color: #4b5c33;">QUIENES YA EXPLORARON</span> UVA CLUB
+  </h2>
+
+  <div class="row justify-content-center">
+    <!-- Testimonio 1 -->
+    <div class="col-md-5 mb-4">
+      <div class="p-4 border border-dark bg-white text-dark text-start">
+        <p class="mb-4">“Me suscribí para regalarme un momento para mí, y termino compartiéndolo con toda mi familia. Abrir la caja se siente como un regalo pensado y hecho con cariño.”</p>
+        <footer class="blockquote-footer text-dark d-flex align-items-center gap-2 border-0 mt-3">
+          <div class="rounded-circle" style="width: 32px; height: 32px; background-color: #3a1f0d;"></div>
+          <div>
+            <strong>MARÍA MARTÍNEZ</strong><br><small>San Martín, Buenos Aires</small>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <!-- Testimonio 2 -->
+    <div class="col-md-5 mb-4">
+      <div class="p-4 border border-dark bg-white text-dark text-start">
+        <p class="mb-4">“Lo que empezó como una curiosidad se convirtió en una costumbre hermosa. Cada caja es distinta, las sugerencias de maridaje nos inspiran a cocinar algo rico y aprender más. Es más que vino: es tiempo de calidad.”</p>
+        <footer class="blockquote-footer text-dark d-flex align-items-center gap-2 border-0 mt-3">
+          <div class="rounded-circle" style="width: 32px; height: 32px; background-color: #3a1f0d;"></div>
+          <div>
+            <strong>FEDERICO GONZÁLES</strong><br><small>Mar del Plata, Buenos Aires</small>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <!-- Puntos de navegación -->
+  <div class="mt-3 text-center">
+    <span class="me-1" style="width: 10px; height: 10px; background: #c4905d; border-radius: 50%; display: inline-block;"></span>
+    <span class="me-1" style="width: 10px; height: 10px; background: #8d5e36; border-radius: 50%; display: inline-block;"></span>
+    <span style="width: 10px; height: 10px; background: #634028; border-radius: 50%; display: inline-block;"></span>
+  </div>
+</section>
+
+
+
+<!-- PREGUNTAS FRECUENTES -->
+<section class="section-spacing container text-center">
+  <h2 class="h2-custom mb-5 text-uppercase">Preguntas Frecuentes</h2>
+
+  <div class="accordion accordion-flush" id="faqAccordion">
+    <!-- FAQ 1 -->
+    <div class="accordion-item border border-dark mb-2">
+      <h2 class="accordion-header" id="faq1">
+        <button class="accordion-button collapsed bg-white text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+          ¿Cómo funciona la suscripción?
+        </button>
+      </h2>
+      <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body text-start text-dark">Respuesta detallada.</div>
+      </div>
+    </div>
+
+    <!-- FAQ 2 -->
+    <div class="accordion-item border border-dark mb-2">
+      <h2 class="accordion-header" id="faq2">
+        <button class="accordion-button collapsed bg-white text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+          ¿Qué pasa si ya probé un vino?
+        </button>
+      </h2>
+      <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body text-start text-dark">Respuesta detallada.</div>
+      </div>
+    </div>
+
+    <!-- FAQ 3 -->
+    <div class="accordion-item border border-dark mb-2">
+      <h2 class="accordion-header" id="faq3">
+        <button class="accordion-button collapsed bg-white text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+          ¿Puedo pausar o cancelar la suscripción?
+        </button>
+      </h2>
+      <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body text-start text-dark">Respuesta detallada.</div>
+      </div>
+    </div>
+
+    <!-- FAQ 4 -->
+    <div class="accordion-item border border-dark mb-2">
+      <h2 class="accordion-header" id="faq4">
+        <button class="accordion-button collapsed bg-white text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
+          ¿Qué métodos de pago aceptan?
+        </button>
+      </h2>
+      <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body text-start text-dark">Respuesta detallada.</div>
+      </div>
+    </div>
+
+    <!-- FAQ 5 -->
+    <div class="accordion-item border border-dark mb-2">
+      <h2 class="accordion-header" id="faq5">
+        <button class="accordion-button collapsed bg-white text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5">
+          ¿Puedo regalar una caja o plan?
+        </button>
+      </h2>
+      <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body text-start text-dark">Respuesta detallada.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
 <!-- CONTACT FORM: Formulario de contacto -->
-<section class="section-spacing container text-center">
-  <h2 class="h2-custom">Formulario de Contacto</h2>
-  <p class="p-custom">Envía un mensaje directamente desde la web.</p>
-  <div class="row justify-content-center">
+<section class="section-spacing container">
+  <h2 class="h2-custom text-center text-uppercase">Animate a ser parte</h2>
+  <p class="p-custom text-center mb-5">¿Querés saber más? Dejanos tu mensaje y te respondemos pronto</p>
+
+  <div class="row align-items-center">
+    <!-- Imagen tarjeta -->
+    <div class="col-md-6 mb-4 mb-md-0 text-center">
+      <img src="https://github.com/solcruzado1/uvaclub/blob/main/img/tarjeta%20club.png?raw=true" class="img-fluid img-rounded" alt="Tarjeta Uva Club">
+    </div>
+
+    <!-- Formulario -->
     <div class="col-md-6">
       <form>
-        <div class="mb-3">
-          <input type="text" class="form-control" placeholder="Tu nombre">
+        <div class="row g-2 mb-3">
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Nombre" required>
+          </div>
+          <div class="col">
+            <input type="email" class="form-control" placeholder="E-mail" required>
+          </div>
         </div>
         <div class="mb-3">
-          <input type="email" class="form-control" placeholder="Tu email">
+          <textarea class="form-control" rows="4" placeholder="Mensaje" required></textarea>
         </div>
-        <div class="mb-3">
-          <textarea class="form-control" rows="4" placeholder="Tu mensaje"></textarea>
-        </div>
-        <button type="submit" class="btn btn-dark w-100">Enviar Mensaje</button>
+        <button type="submit" class="btn mt-2 px-4" style="background-color: #D36D15; color: #fff;">Enviar</button>
       </form>
     </div>
   </div>
@@ -664,10 +471,21 @@
 <!-- FOOTER: Pie de página -->
 <footer class="text-center py-4">
   <div class="container">
-    <p class="p-custom">© 2025 Belluccia 3 - Visible Template. Todos los derechos reservados.</p>
+    <!-- Primer párrafo -->
+    <p class="p-custom">UvaClub</p>
+    
+    <!-- Segundo párrafo (mensaje de suscripción) -->
+    <p class="p-custom">Suscribite para recibir nuevas novedades y ofertas</p>
+    
+    <!-- Tercer párrafo (copyrigth y derechos) -->
+    <p class="p-custom">© 2025 UvaClub. Todos los derechos reservados.</p>
+
+    <!-- Enlace de contacto o más información -->
+    <p class="p-custom"><a href="mailto:contacto@uvaclub.com" style="color: #ffffff; text-decoration: none;">contacto@uvaclub.com</a></p>
   </div>
 </footer>
 <!-- /FOOTER -->
+
 
 <!-- Bootstrap Bundle JS (incluye Popper) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
