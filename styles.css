@@ -30,13 +30,18 @@ body {
 
 /* ESPACIADOS */
 .section-spacing {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
-.section-spacing-sm {
-  padding-top: 50px;
-  padding-bottom: 50px;
+
+.container, .container-xxl {
+  max-width: 1620px !important;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding-left: 32px;
+  padding-right: 32px;
 }
 
 /* ===========================
@@ -55,9 +60,10 @@ body {
   text-align: center;
   transition: background 0.2s;
   box-shadow: none;
+  text-transform: uppercase;   /* <--- Esto hace todo en mayúsculas */
 }
 .btn-custom:hover {
-  background: #b65b11;
+  background: #D36D15;
   color: #fff !important;
 }
 
@@ -77,14 +83,16 @@ body {
   margin-bottom: 1.1rem;
   text-align: left;
 }
+
 .h2-custom {
-  font-size: 2rem;
+  font-size: 36px;
   font-weight: 700;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5em; /* o probá con 16px o 24px */
   text-align: center;
   color: var(--dark-color);
   font-family: 'Sentient', serif;
 }
+
 .h3-custom {
   font-size: 2rem;
   font-weight: 700;
@@ -119,7 +127,7 @@ body {
   letter-spacing: 0.02em; 
 }
 .p-custom-left {
-  font-size: 16px;
+  font-size: 18px;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   color: var(--secondary-color);
@@ -128,7 +136,7 @@ body {
   margin-bottom: 2rem;
 }
 .p-custom-center {
-  font-size: 16px;
+  font-size: 18px;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   color: var(--secondary-color);
@@ -136,6 +144,31 @@ body {
   line-height: 1.5;
   margin-bottom: 2rem;
 }
+
+/* ===========================
+   FONDO ACLARADO
+=========================== */
+.fondo-aclarado {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #fdf4e1;
+  overflow: hidden;
+}
+.fondo-aclarado::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 240, 210, 0.5);
+  z-index: 1;
+  pointer-events: none;
+}
+.fondo-aclarado > * {
+  position: relative;
+  z-index: 2;
+}
+
 
 /* ===========================
    HELPERS Y EXTRAS
@@ -180,6 +213,11 @@ body {
   overflow: hidden;
 }
 
+/* 10. IMÁGENES */
+img.rounded-circle {
+  border: 2px solid var(--light-color);
+}
+
 
 /* ===========================
    NAVBAR
@@ -191,7 +229,7 @@ body {
   padding: 15px 0;
 }
 .navbar.scrolled {
-  background-color: transparent;
+  background-color: #F7EAD1;
   box-shadow: 0 4px 20px rgba(0,0,0,0.05);
 }
 .navbar-brand {
@@ -214,72 +252,107 @@ body {
 =========================== */
 
 .hero-bg {
-  background-image: url('https://github.com/solcruzado1/uvaclub/blob/main/img/home%20final.png?raw=true');
-  background-position: right center;
+  background-image: url('https://github.com/solcruzado1/uvaclubweb/blob/main/img/HOME%20FONDO%20HERO%20copia%204.png?raw=true');
+  background-position: center center;
   background-repeat: no-repeat;
-  background-size: auto 780px;
-  background-color: var(--light-color);
+  background-size: cover;
+  /* background-color: var(--light-color); <-- Comentá o borrá esto */
   min-height: 780px;
   width: 100%;
   display: flex;
-  align-items: right;
+  align-items: center;
   position: relative;
   padding-top: 40px;
   padding-bottom: 40px;
 }
 
+@media (max-width: 991px) {
+  .hero-bg {
+    background-size: cover;
+    background-position: center top;
+    min-height: 450px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+
 /* ===========================
    COMO FUNCIONA LA SUSCRIPCION
 =========================== */
+.fondo-como-funciona {
+  background-image: url('https://github.com/solcruzado1/uvaclubweb/blob/main/img/FONDO%20ICONOS.png?raw=true');
+}
+
 
 /* ===========================
    SOBRE NOSOTROS
 =========================== */
+.fondo-sobre-nosotros {
+  background-image: url('https://github.com/solcruzado1/uvaclubweb/blob/main/img/FONDO%20GENERAL%203.png?raw=true');
+}
 
 /* ===========================
    LO QUE TE INVITAMOS A VIVIR
 =========================== */
 
+.fondo-experiencias {
+  background-image: url('https://github.com/solcruzado1/uvaclubweb/blob/main/img/FONDO%20GENERAL%202.png?raw=true');
+}
+
 /* ===========================
    PLANES DE SUSCRIPCION
 =========================== */
 .planes-bg {
-  background-image: url('https://github.com/solcruzado1/uvaclub/blob/main/img/fondo%20suscripciones.png?raw=true');
+  background-image: url('https://github.com/solcruzado1/uvaclubweb/blob/main/img/SUSCRIPCIONES%20FONDO.png?raw=true');
   background-size: cover;
   background-position:center;
   background-repeat: no-repeat;
-  min-height: 1416px;
+  background-color: #F4E8D0;
   width: 100%;
-  padding-top: 0;
-  padding-bottom: 100px;
-  margin-top: 100px;
 }
+
+
 
 .card-plan-custom {
-  background: var(--light-color);
-  border-radius: 20px;
-  box-shadow: 0 6px 32px rgba(0,0,0,0.07);
-  border: 1.5px solid #fff4e2;
-  transition: box-shadow 0.25s;
-}
-.card-plan-custom:hover {
-  box-shadow: 0 10px 40px rgba(70, 37, 0, 0.15);
-}
-
-.card {
-  border: none;
-  border-radius: 8px;
+  position: relative;
+  background: #FFFCF3 url('https://github.com/solcruzado1/uvaclubweb/blob/main/img/CARDS.png?raw=true'); 
+  background-size: 110%;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  transition: transform 0.3s;
-}
-.card:hover { transform: translateY(-5px); }
-.card-title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--dark-color);
+  border: none;
+  min-height: 600px;
+  max-width: 400px;  /* Cambiá este valor */
+  min-width: 350px;
+  width: 100%;
+  box-shadow: 0 2px 18px rgba(0,0,0,0.07);
+  display: flex;
+  flex-direction: column;
 }
 
+.card-plan-custom::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 250, 235, 0); 
+  z-index: 1;
+  pointer-events: none;
+}
+
+.card-plan-custom > * {
+  position: relative;
+  z-index: 2;
+}
+
+
+.card-plan-custom .btn {
+  margin-top: auto;        
+}
 
 .titulo-plan-rustico {
   font-family: 'Sentient', serif !important;
@@ -296,20 +369,20 @@ body {
   content: "";
   display: block;
   width: 100%;
-  height: 4px;
-  background: var(--dark-color);
-  border-radius: 2px;
+  height: 8px; /* Ajustá según el alto del SVG */
+  background: url('https://raw.githubusercontent.com/solcruzado1/uvaclubweb/8a0267fbf30159577ff48d151b661d8b2a12ecc1/img/Line%2017.svg') center/100% no-repeat;
   position: absolute;
   left: 0;
 }
 
 .titulo-plan-rustico::before {
-  top: -14px;
+  top: -12px;  
 }
 
 .titulo-plan-rustico::after {
-  bottom: -14px;
+  bottom: -12px; /* Ajustá para separarlo del título */
 }
+
 
 .price-big {
   font-family: 'Sentient', serif;
@@ -317,9 +390,10 @@ body {
   font-weight: 700;
   color: var(--dark-color);
   text-align: center;
-  margin-bottom: 8px;
-  margin-top: 12px;
+  margin-bottom: 0 !important;
+  margin-top: 2px;
   letter-spacing: -1px;
+  
 }
 
 .plan-desc-custom {
@@ -329,16 +403,74 @@ body {
   text-transform: uppercase;
   color: var(--dark-color) !important;
   text-align: center;
-  border-top: 2px solid var(--dark-color);
-  border-bottom: 2px solid var(--dark-color);
-  padding: 8px 0;
-  margin: 14px 0 12px 0;
+  padding: 12px 0;
+  margin: 2px 0 2px 0!important;;
   letter-spacing: 0.2px;
+  position: relative;  
+  background: transparent;
+  border: none;     
 }
+
+.plan-desc-custom::before,
+.plan-desc-custom::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 6px; /* Ajustá el alto del SVG */
+  background: url('https://raw.githubusercontent.com/solcruzado1/uvaclubweb/7bd5dcf4d5e016678275eba51d170e1d2754b433/img/Line%2013.svg') center/100% no-repeat;
+  position: absolute;
+  left: 0;
+}
+
+.plan-desc-custom::before {
+  top: 5px;
+  /* O usá top: -12px; si querés separarlo más del texto */
+}
+
+.plan-desc-custom::after {
+  bottom: 5px;
+  
+}
+
+.plan-beneficios {
+  line-height: 3;  
+}
+
+/* FLEX CENTRADO PARA LOS PLANES */
+.planes-flex {
+  display: flex;
+  justify-content: center;   /* Centra horizontal */
+  align-items: flex-start;   /* Alinea arriba. Usá center si querés alineación al medio */
+  gap: 48px;                 /* Espacio entre las cards */
+  margin-top: 40px;
+  flex-wrap: wrap;           /* Para que en mobile se apilen */
+}
+
+
+
+/* Responsive para mobile: una abajo de la otra */
+@media (max-width: 991px) {
+  .planes-flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+  .card-plan-custom {
+    max-width: 98vw;
+    min-width: 0;
+    min-height: 0;
+  }
+}
+
 
 /* ===========================
    PORQUE LA EXPERIENCIA ES COMPLETA
 =========================== */
+
+.fondo-regalos {
+  background-image: url('https://github.com/solcruzado1/uvaclubweb/blob/main/img/FONDO%20ICONOS.png?raw=true');
+  background-position: top 5px;  
+}
 
 /* ===========================
    PROGRAMA WINESWAP
@@ -352,189 +484,440 @@ body {
   margin-bottom: 1rem;
   text-align: left; 
 }
+/* Fondo específico para WINESWAP (cambiá la url si querés otra imagen) */
+.fondo-wineswap {
+  background-image: url('https://github.com/solcruzado1/uvaclubweb/blob/main/img/FONDO%20GENERAL.png?raw=true');
+  /* o la textura que quieras */
+}
+
 
 /* ===========================
-   BODEGAS QUE NOS ACOMPAÑAN
+   MARCAS QUE NOS ACOMPAÑAN
 =========================== */
+.fondo-marcas {
+  background-image: url('https://github.com/solcruzado1/uvaclubweb/blob/main/img/FONDO%20GENERAL.png?raw=true');
+}
 
 /* ===========================
    GALERIA DE EXPERIENCIAS
 =========================== */
 
-.galeria-bg {
-  background-image: url('https://github.com/solcruzado1/uvaclub/blob/main/img/fondo%20galeria.png?raw=true');
-  background-size: cover;
+.fondo-galeria {
+  background-image: url('https://github.com/solcruzado1/uvaclubweb/blob/main/img/fondo%20galeria.png?raw=true');
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-}
-/* GALERÍA */
-.container .row img {
-  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: #F4E8D0; 
 }
 
-.container .row img:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+
+.titulo-pincel {
+  font-family: 'Sentient', serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--dark-color);
+  text-align: center;
+  position: relative;
+  background: transparent;
+  margin: 14px 0 10px 0;
+  padding: 2px 0;
+  letter-spacing: 1px;
+  z-index: 1;
+  display: inline-block;
+}
+
+.titulo-pincel::before,
+.titulo-pincel::after {
+  content: "";
+  display: block;
+  width: 100%; /* Ajustá este valor si querés la línea más corta o más larga */
+  max-width: 400px; /* Máximo largo, opcional */
+  height: 8px;
+  background: url('https://raw.githubusercontent.com/solcruzado1/uvaclubweb/7bd5dcf4d5e016678275eba51d170e1d2754b433/img/Line%2013.svg') center/100% no-repeat;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.titulo-pincel::before {
+  top: -7px;
+}
+
+.titulo-pincel::after {
+  bottom: -7px;
 }
 
 /* ===========================
    OPINIONES DE MIEMBROS
 =========================== */
-.testimonio-caja-img {
-  height: 220px;
-  width: auto;
-  object-fit: contain;
-  display: block;
-  margin: 0 auto;
+.fondo-testimonios {
+  background-image: url('https://github.com/solcruzado1/uvaclubweb/blob/main/img/FONDO%20GENERAL%203.png?raw=true');
 }
 
-.titulo-planes-opiniones {
-  font-family: 'Sentient', serif !important;
-  font-weight: 700 !important;
-  font-size: 1rem;
-  color: var(--dark-color);
-  text-align: left;
-  margin-bottom: 1rem;
-  letter-spacing: 0.01em;
+.testimonio-fondo-png {
+  background: url('https://github.com/solcruzado1/uvaclubweb/blob/main/img/OPINIONES.png?raw=true') center/cover no-repeat;
+  min-height: 360px;      
+  max-width: 420px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;   /* CAMBIÁ ESTO */
+  position: relative;
+  padding: 0;
+  margin-bottom: 0;
 }
+
+
+.testimonio-content {
+  width: 100%;
+  padding-top: 74px;
+  padding-bottom: 32px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+
+@media (max-width: 575px) {
+  .testimonio-fondo-png {
+    max-width: 95vw;
+    min-height: 320px;
+  }
+  .testimonio-content {
+    padding-top: 64px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 20px;
+  }
+}
+
+.dot-indicator {
+  width: 16px;
+  height: 16px;
+  background: #bfa77a;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.6;
+  margin: 0 4px;
+  transition: opacity 0.2s, background 0.2s;
+}
+.dot-indicator.active {
+  opacity: 1;
+  background: #d36d15;
+}
+
+.etiqueta-plan {
+  position: absolute;
+  top: 8px;           /* Ajustá este valor hasta que quede justo en la franja naranja */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  color: #432812;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-align: center;
+  letter-spacing: 0.02em;
+  z-index: 2;
+  background: transparent;
+  pointer-events: none; /* Así no tapa nada clickeable */
+  /* ¡No uses fondo ni border! La franja es del PNG */
+}
+
 
 /* ===========================
    PREGUNTAS FRECUENTES
 =========================== */
-
-/* 10. IMÁGENES */
-img.rounded-circle {
-  border: 5px solid var(--light-color);
+.faq-bg {
+  background-image: url('https://github.com/solcruzado1/uvaclubweb/blob/main/img/FONDO%20GENERAL%203.png?raw=true');
 }
+
+.pregunta-textura {
+  position: relative;
+  margin-bottom: 0;
+}
+
+.pregunta-textura::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px; /* O el valor de grosor que quieras */
+  background: url('https://raw.githubusercontent.com/solcruzado1/uvaclubweb/c77063c44ad52920056b4fa5c565c0f8edc76d0d/img/Line%2018.svg') center/100% no-repeat;
+  background-size: 100% 100%; /* Así el SVG se escala solo al alto definido */
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+
+.bloque-faqs {
+  width: 100%;
+  margin-left: 70px;
+  margin-right: auto;
+
+}
+
+@media (min-width: 992px) {
+  .bloque-faqs .col-lg-6:first-child {
+    padding-left: 48px;
+    padding-right: 24px;
+  }
+  .bloque-faqs .col-lg-6:last-child {
+    padding-left: 24px;
+    padding-right: 48px;
+  }
+}
+
+/* Si seguís usando las líneas SVG: */
+.faq-item {
+  border-bottom: none !important;
+  position: relative;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.faq-item:not(:last-child)::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 11px;
+  background: url('https://raw.githubusercontent.com/solcruzado1/uvaclubweb/99383860d15a89ee65b8a4fe0628ed0cd48c3458/img/linea%20FAQS.svg') center/100% no-repeat;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+.faq-item:last-child::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 11px;
+  background: url('https://raw.githubusercontent.com/solcruzado1/uvaclubweb/99383860d15a89ee65b8a4fe0628ed0cd48c3458/img/linea%20FAQS.svg') center/100% no-repeat;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
 
 
 /* ===========================
    ANIMATE A SER PARTE
 =========================== */
+.fondo-contacto {
+  background-image: url('https://github.com/solcruzado1/uvaclubweb/blob/main/img/FONDO%20GENERAL%204.png?raw=true');
+}
 
 form .form-control {
   border-radius: 8px;
-  border: 1px solid #ced4da;
+  border: 1px solid #FFFCF3;
 }
   
+.contacto-bg {
+  background: #FFFCF3; /* O el cremita que vos quieras */
+}
+
   
 /* ===========================
-   FOOTER
+   FOOTER CORREGIDO Y PROLIJO
 =========================== */
-footer {
-  background-color: var(--dark-color);
-  color: #fff;
-  font-size: 0.9rem;
-  padding: 2rem 0 0.5rem 0;
-  text-align: center;
+.footer-custom {
+  background: #4a2209;
+  color: #EFE6DD;
+  font-family: 'Roboto', sans-serif;
+  padding: 100px 0 100px 0;
 }
 
-  .footer-custom {
-  background-color: var(--dark-color);
-  color: #fff;
-  padding: 2.5rem 0 1rem 0;
-  font-size: 1rem;
-  text-align: center;
-  width: 100%;
-}
-
-.footer-container {
-  max-width: 1080px;
+/* Contenedor principal de columnas */
+.container-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 1600px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 24px;
+  gap: 106px;
 }
-
-/* Título principal */
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 0 0 auto;
+}
+.footer-col1 {
+  width: 350px;
+  margin-right: 422px;
+}
+.footer-logo {
+  max-width: 240px;
+  margin-bottom: 32px;
+}
 .footer-title {
-  font-family: var(--font-title);
   font-weight: 700;
-  font-size: 2rem;
-  margin-bottom: 0.3em;
-  letter-spacing: 1px;
+  margin-bottom: 16px;
+  font-size: 1.2rem;
+  color: #EFE6DD;
+  white-space: nowrap;
 }
-
-/* Subtítulo */
-.footer-sub {
-  font-size: 1.15rem;
-  margin-bottom: 1.2em;
-  color: #fff9e6;
-}
-
-/* FORMULARIO DE SUSCRIPCIÓN */
 .footer-form {
   display: flex;
-  justify-content: center;
-  gap: 0.7em;
-  margin-bottom: 1.5em;
-  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 28px;
+  gap: 0;
 }
-.footer-input {
-  padding: 0.7em 1em;
-  border-radius: 30px;
-  border: none;
+.footer-input-custom {
+  border: 2px solid #D36D15;
+  border-radius: 9px 0 0 9px;
+  padding: 0.7em 1.2em;
+  font-size: 1.13em;
+  min-width: 230px;
+  background: rgba(255, 239, 214, 0.1); /* Cremita translúcido */
+  color: #EFE6DD;
   outline: none;
-  font-size: 1em;
-  width: 210px;
-  max-width: 70vw;
-}
-.footer-btn {
-  background: var(--primary-color);
-  color: #fff;
-  border: none;
-  border-radius: 30px;
-  padding: 0.7em 1.7em;
-  font-size: 1em;
-  font-family: var(--font-body);
-  font-weight: 600;
-  cursor: pointer;
+  height: 48px;
   transition: background 0.2s;
 }
-.footer-btn:hover {
-  background: #b65b11;
+
+.footer-input-custom::placeholder {
+  color: #EFE6DD;  /* El mismo cremita que el texto real */
+  opacity: 0.5;      /* Para que no se vea deslavado */
 }
 
-/* REDES SOCIALES */
-.footer-social {
-  margin-top: 1.2em;
+.footer-btn-custom {
+  background: #D36D15;
+  color: #EFE6DD;
+  font-weight: 600;
+  border: none;
+  border-radius: 0 9px 9px 0;
+  padding: 0 30px;
+  font-size: 1.13em;
+  height: 48px;
+  transition: background 0.2s;
   display: flex;
-  justify-content: center;
-  gap: 1em;
+  align-items: center;
 }
-.footer-social a {
-  color: #fff;
-  font-size: 1.7em;
+.footer-btn-custom:hover { background: #b65b11; }
+
+.footer-section-title {
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #EFE6DD;
+}
+.footer-link {
+  color: #DC8A44;
+  font-size: 1rem;
+  text-decoration: none;
+  margin-bottom: 4px;
+  display: block;
+  line-height: 24px;
   transition: color 0.2s;
 }
-.footer-social a:hover {
-  color: var(--primary-color);
+.footer-link-legal {
+  color: #DC8A44 !important;
+  font-size: 1rem;
+  line-height: 24px;
+}
+.footer-link:hover,
+.footer-link-legal:hover {
+  color: #EFE6DD !important;
+}
+.footer-links-legales {
+  margin-top: 20px;
+}
+.footer-text {
+  color: #EFE6DD;
+  font-size: 1rem;
+  margin-bottom: 2px;
+  line-height: 24px;
 }
 
-/* ENLACES Y COPYRIGHT */
-.footer-bottom {
-  margin-top: 2.5em;
-  font-size: 0.95em;
-}
-.footer-links {
+/* "Atención al cliente" compacto */
+.footer-contact {
   display: flex;
-  justify-content: center;
-  gap: 2em;
-  margin-bottom: 0.6em;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
 }
-.footer-links a {
-  color: #fff8e2;
-  text-decoration: underline;
-  transition: color 0.2s;
+.footer-contact .footer-section-title {
+  margin-bottom: 7px;
 }
-.footer-links a:hover {
-  color: var(--primary-color);
+.footer-contact .footer-contact-line {
+  margin-bottom: 4px;
+  line-height: 24px;
+  font-size: 1rem;
+  color: #EFE6DD;
+}
+.footer-contact .footer-contact-line:last-child {
+  margin-bottom: 0;
+}
+
+/* ====== NUEVO BLOQUE FINAL, copyright + iconos en una fila ====== */
+.footer-bottom-row {
+  max-width: 1600px;
+  margin: 48px auto 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 .footer-copy {
-  color: #fff5c2;
+  color: #EFE6DD;
+  font-size: 1em;
+  opacity: .9;
+  text-align: left;
+}
+.footer-social-bottom {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.footer-social-bottom img {
+  opacity: 0.9;
+  filter: grayscale(0);
+}
+.footer-social-bottom img:hover {
+  opacity: 1;
+  filter: brightness(1.4);
+}
+
+/* MOBILE: apila el copyright y los iconos */
+@media (max-width: 900px) {
+  .container-footer {
+    flex-direction: column;
+    gap: 40px;
+    padding: 0 12px;
+  }
+  .footer-col1,
+  .footer-col2,
+  .footer-col3 {
+    width: 100% !important;
+    margin-right: 0 !important;
+  }
+  .footer-bottom-row {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    padding: 0 12px;
+  }
 }
 
 
-  
+/* ============================== */
+/* HERO PAGINA DETALLE */
+/* ============================== */
+.plan-expedicion-hero {
+  background: #fcf1d9; /* tu color */
+  padding: 100px 0 48px 0; /* 100px arriba, 48px abajo */
+}
+
+
+.fondo-expedicion-hero {
+  background-image: url('https://github.com/solcruzado1/uvaclubweb/blob/main/img/FONDO%20GENERAL.png?raw=true');
+}
+
+
 /* ============================== */
 /* MEDIA QUERIES */
 /* ============================== */
@@ -563,5 +946,980 @@ footer {
 @media screen and (max-width: 576px) {
   .masonry__container {
     column-count: 1;
+  }
+}
+
+/* ============================== */
+/* hero */
+/* ============================== */
+ 
+@media (max-width: 991px) {
+  .hero-bg .row {
+    flex-direction: column-reverse !important;
+    text-align: center;
+  }
+  .hero-bg .col-lg-6 {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 32px;
+  }
+  .hero-bg img {
+    max-width: 95vw;
+    margin: 0 auto;
+  }
+  .h1-custom {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+}
+@media (max-width: 576px) {
+  .btn-custom {
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    /* Si querés espacio abajo, agregale margin-bottom */
+  }
+  /* Si el contenedor lo centraba con flex, pisalo: */
+  .section-hero .container, 
+  .hero-content { 
+    align-items: flex-start !important; 
+    text-align: left !important;
+  }
+}
+@media (max-width: 576px) {
+  .hero-img {
+    max-width: 220px !important;
+    width: 100%;
+    margin: 32px 0 0 0;
+    display: block;
+  }
+  .col-lg-6.text-center {
+    text-align: left !important;
+    justify-content: flex-start !important;
+  }
+}
+
+/* ============================== */
+/* como funciona*/
+/* ============================== */
+
+@media (max-width: 767px) {
+  .fondo-como-funciona .row {
+    flex-direction: column;
+  }
+  .fondo-como-funciona .col-md-4 {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto 32px auto;
+  }
+  .fondo-como-funciona img {
+    max-width: 110px;
+    margin-bottom: 16px;
+  }
+  .h4-custom {
+    font-size: 18px;
+  }
+  .p-custom-center {
+    font-size: 16px;
+  }
+}
+
+/* ============================== */
+/* sobre nosotros*/
+/* ============================== */
+
+@media (max-width: 991px) {
+  .fondo-sobre-nosotros .d-flex {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .fondo-sobre-nosotros img {
+    width: 100vw !important;
+    max-width: 95vw !important;
+    height: auto !important;
+  }
+  .fondo-sobre-nosotros .d-flex.flex-column {
+    align-items: center !important;
+    max-width: 98vw !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    text-align: center;
+  }
+}
+
+/* ============================== */
+/* lo que te invitamos a vivir*/
+/* ============================== */
+
+@media (max-width: 991px) {
+  .fondo-experiencias .row {
+    flex-direction: column !important;
+    gap: 24px !important;
+  }
+  .fondo-experiencias .col-md-5 {
+    width: 100% !important;
+    max-width: 96vw !important;
+    margin-bottom: 32px;
+  }
+  .fondo-experiencias img {
+    width: 95vw !important;
+    max-width: 98vw !important;
+    height: auto !important;
+  }
+}
+
+/* ============================== */
+/* porque la experiencia es completa*/
+/* ============================== */
+@media (max-width: 991px) {
+  .wineswap-padding > div {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 24px;
+    text-align: center;
+  }
+  .wineswap-padding img {
+    width: 98vw !important;
+    max-width: 98vw !important;
+    height: auto !important;
+    margin: 0 auto;
+  }
+  .wineswap-padding > div > div {
+    max-width: 98vw !important;
+  }
+}
+
+/* ============================== */
+/* marcas*/
+/* ============================== */
+@media (max-width: 767px) {
+  .fondo-marcas .col-6 {
+    width: 100% !important;
+    max-width: 90vw !important;
+    margin-bottom: 18px;
+    text-align: center;
+  }
+  .fondo-marcas img {
+    max-width: 180px !important;
+  }
+}
+
+/* ============================== */
+/* galeria*/
+/* ============================== */
+@media (max-width: 767px) {
+  .fondo-galeria .row {
+    flex-direction: column !important;
+    gap: 32px;
+  }
+  .fondo-galeria .col-md-4 {
+    width: 100% !important;
+    max-width: 95vw !important;
+    margin-bottom: 32px;
+  }
+}
+
+/* ============================== */
+/* testimonios*/
+/* ============================== */
+
+@media (max-width: 991px) {
+  .fondo-testimonios .row {
+    flex-direction: column !important;
+    gap: 32px;
+  }
+  .testimonio-fondo-png {
+    max-width: 96vw !important;
+    min-width: 0;
+    min-height: 240px;
+  }
+}
+
+/* ============================== */
+/* preguntas frecuentes*/
+/* ============================== */
+
+@media (max-width: 991px) {
+  .faq-bg .row {
+    flex-direction: column !important;
+  }
+  .faq-bg .col-lg-6 {
+    width: 100% !important;
+    max-width: 96vw !important;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  .faq-bg img {
+    max-width: 85vw !important;
+    margin: 0 auto;
+  }
+}
+
+/* ============================== */
+/* contacto*/
+/* ============================== */
+
+@media (max-width: 991px) {
+  .fondo-contacto .row {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 24px;
+  }
+  .fondo-contacto .col-md-6 {
+    width: 100% !important;
+    max-width: 95vw !important;
+    margin-bottom: 24px;
+  }
+  .fondo-contacto img {
+    max-width: 95vw !important;
+    height: auto !important;
+  }
+  .fondo-contacto form {
+    width: 100%;
+    max-width: 95vw;
+  }
+}
+
+/* ============================== */
+/* footer*/
+/* ============================== */
+@media (max-width: 900px) {
+  .footer-custom .container-footer {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 32px;
+  }
+  .footer-custom .footer-col {
+    width: 100% !important;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
+
+/* ============================== */
+/* HERO DETALLE*/
+/* ============================== */
+@media (max-width: 991px) {
+  .plan-expedicion-hero .container.d-flex {
+    flex-direction: column !important;
+    gap: 32px !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .plan-expedicion-hero .container > div:first-child {
+    max-width: 98vw !important;
+    width: 100%;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  .plan-expedicion-hero h1 {
+    font-size: 2.1rem !important;
+    text-align: center !important;
+  }
+  .plan-expedicion-hero img {
+    max-width: 95vw !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-bg {
+    padding-top: 80px !important;  /* Cambiá 80px por el valor que prefieras */
+  }
+}
+
+@media (max-width: 576px) {
+  .h1-custom {
+    font-size: 1.6rem !important;
+    line-height: 1.1;
+    text-align: left;
+    margin-bottom: 1.2rem;
+  }
+  .h2-custom {
+    font-size: 1.4rem !important;
+    margin-bottom: 0.8rem;
+  }
+  .h3-custom {
+    font-size: 1.1rem !important;
+  }
+  .h4-custom {
+    font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .p-custom,
+  .p-custom-center,
+  .p-custom-left {
+    font-size: 16px !important;
+    line-height: 1.5;
+  }
+}
+@media (max-width: 576px) {
+  .fondo-sobre-nosotros {
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
+  }
+  .fondo-sobre-nosotros .container {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+  .fondo-sobre-nosotros .img-fluid {
+    margin-bottom: 32px !important;
+  }
+  .fondo-sobre-nosotros .h2-custom {
+    margin-bottom: 24px !important;
+  }
+  .fondo-sobre-nosotros .p-custom-center {
+    margin-bottom: 32px !important;
+  }
+}
+@media (max-width: 576px) {
+  .fondo-aclarado.fondo-sobre-nosotros {
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
+  }
+  .fondo-sobre-nosotros .d-flex.flex-wrap {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 32px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .fondo-sobre-nosotros .flex-shrink-0,
+  .fondo-sobre-nosotros .d-flex.flex-column {
+    flex-basis: 100% !important;
+    max-width: 98vw !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .fondo-sobre-nosotros img.img-fluid {
+    width: 95vw !important;
+    height: auto !important;
+    margin: 0 auto 18px auto !important;
+    display: block;
+  }
+  .fondo-sobre-nosotros .h2-custom {
+    font-size: 1.5rem !important;
+    margin-bottom: 18px !important;
+    text-align: center !important;
+    width: 100%;
+  }
+  .fondo-sobre-nosotros .p-custom-left {
+    font-size: 16px !important;
+    margin-bottom: 28px !important;
+    text-align: center !important;
+    padding: 0 8px !important;
+    width: 100%;
+    max-width: 95vw;
+  }
+  .fondo-sobre-nosotros .btn-custom {
+    margin: 0 auto !important;
+    display: block;
+    width: 90%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Margen lateral para toda la sección */
+  .fondo-experiencias {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  /* Texto más aire a los costados */
+  .fondo-experiencias .p-custom-center {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+  /* Imágenes más chicas */
+  .fondo-experiencias img.img-fluid {
+    max-width: 90vw !important;
+    width: 220px !important;
+    height: auto !important;
+    margin-bottom: 18px !important;
+  }
+  /* Para que el bloque de cada experiencia no quede tan pegado */
+  .fondo-experiencias .col-md-5 {
+    margin-bottom: 32px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  /* Títulos menos grandes */
+  .fondo-experiencias .h5-maridaje-exclusivo {
+    font-size: 1.1rem !important;
+    margin-bottom: 0.7rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .planes-bg {
+    padding-top: 48px !important;
+    padding-bottom: 64px !important;
+    background-size: cover !important;
+    background-position: center !important;
+    min-height: 100vh !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-plan-custom {
+    background-size: cover !important;  /* Que la textura cubra toda la card */
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    min-height: 0 !important;
+    max-width: 98vw !important;
+    width: 100% !important;
+    border-radius: 18px !important;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 24px 8px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .titulo-plan-rustico {
+    font-size: 1.2rem !important;
+    margin-bottom: 1rem !important;
+  }
+  .price-big {
+    font-size: 2.6rem !important;
+    margin-bottom: 0.7rem !important;
+    margin-top: 0.3rem !important;
+  }
+  .plan-desc-custom {
+    font-size: 1rem !important;
+    padding: 8px 0 !important;
+  }
+  .card-plan-custom ul.plan-beneficios li {
+    font-size: 0.96rem !important;
+  }
+}
+@media (max-width: 576px) {
+  .planes-bg .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .row.mt-5.align-items-stretch.g-4 {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 991px) {
+  .planes-bg {
+    padding-top: 120px !important;  /* Subilo hasta que el título baje lo suficiente */
+    padding-bottom: 64px !important; /* Opcional, si querés más abajo también */
+  }
+}
+
+/* Contenedor general */
+.wineswap-contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 500px;
+  gap: 24px;
+  width: 100%;
+  padding: 0 32px;
+}
+
+/* Texto */
+.wineswap-texto {
+  flex: 0 0 540px;
+  max-width: 500px;
+  text-align: left;
+}
+
+.wineswap-texto .h2-custom {
+  color: #353A0E;
+  font-size: 2rem; /* 32px desktop */
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+
+.wineswap-texto .p-custom-left {
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 1rem;
+}
+.wineswap-texto .p-custom-left[style*="font-weight:700"] {
+  color: #353A0E !important;
+  font-weight: 700 !important;
+}
+
+@media (max-width: 991px) {
+  .wineswap-contenedor {
+    flex-direction: column;
+    gap: 32px;
+    min-height: unset;
+    padding: 0 8vw;
+  }
+  .wineswap-texto {
+    max-width: 98vw;
+    width: 100%;
+    text-align: center;
+  }
+  .wineswap-texto .h2-custom {
+    font-size: 1.3rem !important;
+    margin-bottom: 1.1rem;
+    text-align: center;
+  }
+  .wineswap-texto .p-custom-left {
+    font-size: 16px !important;
+    text-align: center;
+  }
+  .wineswap-img img {
+    max-width: 96vw !important;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+/* Mantené el color del título igual que el resto en mobile */
+@media (max-width: 576px) {
+  .wineswap-texto .h2-custom {
+    font-size: 1.1rem !important;
+    margin-bottom: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .wineswap-texto .h2-custom {
+    font-size: 1.5rem !important;   /* Unos 24px aprox */
+    margin-bottom: 1.3rem;
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 576px) {
+  .wineswap-img img {
+    margin-top: -120px !important;    /* Subila, ajustá el valor si querés más o menos */
+    margin-bottom: 0 !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .testimonio-content {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .testimonio-content p,
+  .testimonio-content h5 {
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+  }
+  .testimonio-content h5 {
+    font-size: 1.05rem !important;
+    margin-bottom: 12px !important;
+  }
+}
+
+/* --- PROGRAMA WINESWAP RESPONSIVE --- */
+.wineswap-padding h2,
+.wineswap-padding h2[style] {
+  font-size: 26px !important;
+  margin-bottom: 20px !important;
+}
+
+.wineswap-padding p,
+.wineswap-padding p[style] {
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+}
+
+@media (max-width: 768px) {
+  .wineswap-padding h2,
+  .wineswap-padding h2[style] {
+    font-size: 20px !important;
+    margin-bottom: 16px !important;
+  }
+  .wineswap-padding p,
+  .wineswap-padding p[style] {
+    font-size: 15px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .wineswap-padding h2,
+  .wineswap-padding h2[style] {
+    font-size: 17px !important;
+    margin-bottom: 12px !important;
+  }
+  .wineswap-padding p,
+  .wineswap-padding p[style] {
+    font-size: 14.5px !important;
+  }
+}
+
+/* Centra texto y ajusta espaciado de imagen en mobile y tablet */
+@media (max-width: 991px) {
+  .wineswap-padding > div {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 10px !important; /* Achicá el espacio entre texto e imagen */
+    padding: 0 8vw;
+  }
+  .wineswap-padding > div > div {
+    max-width: 95vw !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+  .wineswap-padding img {
+    margin-top: -120px !important;
+    margin-bottom: 0 !important;
+    max-width: 88vw !important;
+    width: 350px !important;
+    height: auto !important;
+    display: block;
+  }
+}
+
+@media (max-width: 991px) {
+  /* Centra todo el bloque de preguntas y la imagen una abajo de la otra */
+  .faq-bg .bloque-faqs {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 32px !important;
+    margin-left: 0 !important;
+  }
+
+  /* Centra el título de la sección */
+  .faq-bg .h2-custom {
+    text-align: center !important;
+    font-size: 1.7rem !important;
+    margin-bottom: 1.8rem !important;
+    margin-top: 0 !important;
+  }
+
+  /* Preguntas: centradas y 100% */
+  .faq-bg .col-lg-6 {
+    width: 100% !important;
+    max-width: 95vw !important;
+    text-align: center !important;
+    margin-bottom: 24px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Listas y preguntas centradas */
+  .faq-bg ul.list-unstyled,
+  .faq-bg li.faq-item,
+  .faq-bg .faq-item .d-flex {
+    text-align: center !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction: column !important;
+    width: 100%;
+  }
+
+  /* Ícono + alineación vertical en + */
+  .faq-bg .faq-item .fs-4 {
+    margin-left: 0 !important;
+    margin-top: 4px !important;
+  }
+
+  /* Título de pregunta más chico en mobile */
+  .faq-bg .faq-item strong {
+    font-size: 1rem !important;
+  }
+
+  /* Ajuste general de tamaño */
+  .faq-bg .p-custom {
+    font-size: 16px !important;
+  }
+
+  /* Imagen FAQ responsive y centrada */
+  .faq-bg img.img-fluid {
+    display: block;
+    margin: 16px auto 0 auto;
+    max-width: 80vw !important;
+    height: auto !important;
+  }
+}
+
+@media (max-width: 991px) {
+  /* Centra el bloque, pero deja el texto alineado a la izquierda */
+  .faq-bg .col-lg-6 {
+    width: 100% !important;
+    max-width: 95vw !important;
+    margin: 0 auto 24px auto !important;
+    text-align: left !important;         /* 👈 Texto a la izquierda */
+    display: block !important;
+  }
+  /* El título sí centrado */
+  .faq-bg .h2-custom {
+    text-align: center !important;
+    font-size: 1.7rem !important;
+    margin-bottom: 1.8rem !important;
+  }
+  /* Las preguntas ocupan todo el ancho pero texto izq */
+  .faq-bg ul.list-unstyled,
+  .faq-bg li.faq-item,
+  .faq-bg .faq-item .d-flex {
+    width: 100%;
+    text-align: left !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    flex-direction: row !important;
+  }
+  /* El signo + a la derecha (opcional) */
+  .faq-bg .faq-item .fs-4 {
+    margin-left: auto !important;
+    margin-top: 0 !important;
+  }
+  /* Tamaño del texto y margen */
+  .faq-bg .faq-item strong,
+  .faq-bg .p-custom {
+    font-size: 1rem !important;
+  }
+  /* Contenedor para centrar visualmente */
+  .faq-bg .container {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+  /* Imagen responsive y centrada */
+  .faq-bg img.img-fluid {
+    display: block;
+    margin: 10px auto 10px auto;
+    max-width: 90vw !important;
+    height: auto !important;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Achicá solo la imagen de la tarjeta en mobile */
+  .fondo-contacto .img-fluid.img-rounded {
+    max-width: 230px !important; /* Ajustá el tamaño a gusto */
+    width: 90vw !important;
+    margin: 0 auto 20px auto !important;
+    display: block;
+  }
+  /* Opcional: menos padding al costado en el form también */
+  .fondo-contacto .col-md-6 {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .footer-custom .container-footer {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 32px;
+    text-align: left !important;
+  }
+  .footer-custom .footer-col {
+    width: 100% !important;
+    margin-bottom: 20px;
+    text-align: left !important;
+    align-items: flex-start !important;
+  }
+  /* Para que el wrapper de columnas 2 y 3 no fuerce alineación al centro ni mínimo ancho */
+  .footer-custom .container-footer > div[style*="display: flex"] {
+    flex-direction: column !important;
+    min-width: 0 !important;
+    width: 100% !important;
+    gap: 32px !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+  }
+  /* Inputs y botón, alineados a la izquierda */
+  .footer-form,
+  .footer-form input,
+  .footer-form button {
+    text-align: left !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+  }
+  .footer-title,
+  .footer-section-title {
+    text-align: left !important;
+    width: 100%;
+  }
+}
+
+/* Para el copyright y las redes */
+@media (max-width: 500px) {
+  .footer-bottom-row {
+    flex-direction: column !important;
+    gap: 16px;
+    align-items: flex-start !important;
+    text-align: left !important;
+    padding: 0 12px;
+  }
+  .footer-social-bottom {
+    justify-content: flex-start !important;
+    margin-left: 0 !important;
+  }
+}
+@media (max-width: 900px) {
+  .footer-form {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    width: 100%;
+    gap: 10px;
+  }
+  .footer-input-custom {
+    border-radius: 9px !important;        /* Todos los bordes redondeados */
+    min-width: 0 !important;
+    width: 100% !important;
+    margin-bottom: 0;
+  }
+  .footer-btn-custom {
+    border-radius: 9px !important;        /* Todos los bordes redondeados */
+    width: 100% !important;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 0;
+    margin-left: 0;
+    display: block;
+  }
+}
+
+@media (max-width: 900px) {
+  .footer-bottom-row {
+    margin-top: -160px !important;   /* Bajalo a gusto (antes estaba en 48px) */
+    margin-bottom: 0 !important;
+  }
+  .footer-custom {
+    padding-bottom: 32px !important; /* Si tu footer tenía 100px, bajalo solo para mobile */
+  }
+}
+
+
+@media (max-width: 900px) {
+  .footer-form {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0 !important;
+  }
+  .footer-input-custom {
+    width: 100% !important;
+    border-radius: 9px 9px 0 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .footer-btn-custom {
+    width: 100% !important;
+    border-radius: 0 0 9px 9px !important;
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: center !important;
+    display: block !important;
+  }
+}
+.footer-form {
+  max-width: 340px;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .footer-form {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0 !important;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+  .footer-input-custom {
+    width: 100% !important;
+    border-radius: 9px 9px 0 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .footer-btn-custom {
+    width: 100% !important;
+    border-radius: 0 0 9px 9px !important;
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: center !important;
+    display: block !important;
+    /* Agregá esto para separar */
+    border-top: 2px solid #fff1 !important; /* una línea blanca muy clarita */
+  }
+}
+
+@media (max-width: 576px) {
+  .plan-expedicion-hero {
+    padding: 36px 0 !important;
+  }
+  .plan-expedicion-hero .container.d-flex {
+    flex-direction: column-reverse !important;
+    gap: 24px !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    text-align: center !important;
+  }
+  .plan-expedicion-hero img {
+    width: 98vw !important;
+    max-width: 290px !important;
+    margin: 0 auto 12px auto !important;
+    border-radius: 12px !important;
+    display: block !important;
+  }
+  /* El precio */
+  .plan-expedicion-hero span[style*="font-size: 32px"] {
+    font-size: 1.45rem !important;
+    margin-bottom: 16px !important;
+    text-align: center !important;
+    display: block !important;
+  }
+  /* El título */
+  .plan-expedicion-hero h1 {
+    font-size: 1.3rem !important;
+    text-align: center !important;
+    margin-bottom: 0.6rem !important;
+    margin-top: 0 !important;
+  }
+  .plan-expedicion-hero .titulo-expedicion-wrap {
+    margin-bottom: 20px !important;
+  }
+  /* Líneas arriba y abajo del título */
+  .plan-expedicion-hero .titulo-expedicion-wrap img {
+    max-width: 160px !important;
+    height: 9px !important;
+    margin: 10px auto !important;
+  }
+  /* Bajada descriptiva */
+  .plan-expedicion-hero > .container  {
+    font-size: 1rem !important;
+    line-height: 1.45 !important;
+    margin-bottom: 20px !important;
+    max-width: 98vw !important;
+    text-align: center !important;
+  }
+  .plan-expedicion-hero .btn-custom {
+    font-size: 1rem !important;
+    padding: 10px 0 !important;
+    width: 90% !important;
+    max-width: 320px !important;
+    margin: 0 auto 18px auto !important;
+    display: block !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .plan-expedicion-hero {
+    padding-top: 120px !important;  /* Ajustá el valor si querés más/menos */
+  }
+}
+@media (max-width: 576px) {
+  .navbar-brand img, /* Si usás imagen */
+  .navbar-brand {
+    max-width: 110px !important;  /* Ajustá el tamaño a gusto */
+    font-size: 1.2rem !important; /* Si es texto, achica el tamaño */
   }
 }
